@@ -16,7 +16,7 @@ jobs:
           echo "org.gradle.java.home=${JAVA_HOME_17_X64//\\/\/}" >> gradle.properties
           echo "JAVA_HOME=$JAVA_HOME_17_X64" >> $GITHUB_ENV
         shell: bash
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.1.1
       - run: |
           npm install
       - run: |
@@ -30,5 +30,5 @@ jobs:
           echo "org.gradle.java.home=${JAVA_HOME_17_X64//\\/\/}" >> gradle.properties
           echo "JAVA_HOME=$JAVA_HOME_17_X64" >> $GITHUB_ENV
         shell: bash
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.1.1
       - uses: ./
