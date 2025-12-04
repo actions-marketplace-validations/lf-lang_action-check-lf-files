@@ -8,10 +8,10 @@ export const quick = false // change to true for quicker local testing
 
 if (!quick) {
   test('checkout repo', async () => {
-    const dir = 'gh-action-test-2';
+    const dir = 'gh-action-test-2'
     await deleteIfExists(dir)
-    fs.mkdirSync(dir);
-    fs.writeFileSync(`${dir}/conflict`, 'File that makes directory not empty\n');
+    fs.mkdirSync(dir)
+    fs.writeFileSync(`${dir}/conflict`, 'File that makes directory not empty\n')
     await expect(clone('master', dir)).rejects.toThrow(
       `fatal: destination path '${dir}' already exists and is not an empty directory.`
     )
